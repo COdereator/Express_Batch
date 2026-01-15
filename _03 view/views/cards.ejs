@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <%- include('partials/nav') %>
+    <div class="container">
+        <div class="row">
+            <% cards.forEach(card => {%>
+                <div class="col-3">
+                  <div class="card">
+                    <img src="<%= card.image %>" alt="" class="card-top-img" />
+                    <div class="card-body">
+                      <div class="card-title"><%= card.title %></div>
+                      <div class="card-text"><%= card.desc %></div>
+                      <div class="btn btn-dark mt-2"><%= card.price %></div>
+                    </div>
+                  </div>
+                </div>
+                <%}) %>
+        </div>
+    </div>
+
+</body>
+</html>
