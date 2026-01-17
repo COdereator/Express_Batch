@@ -14,5 +14,5 @@ exports.postForm = (req, res) => {
 }
 
 exports.getCards = (req, res) => {
-    res.render("cards", {cards})
+    res.render("cards", { cards })
 }
