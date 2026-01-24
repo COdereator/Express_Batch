@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+</head>
+
+<body>
+    <%- include('partials/nav') %>
+
+        <h1>Details</h1>
+
+        <% if(singleCard) { %>
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        <img src="<%= singleCard.image %>" class="img-fluid" alt="">
+                    </div>
+
+                    <div class="col-6">
+                        <h1>
+                            <%= singleCard.title %>
+                        </h1>
+
+                        <p>
+                            <%= singleCard.desc %>
+                        </p>
+
+                        <button class="btn btn-dark">
+                            <%= singleCard.price %>
+                        </button>
+
+                        <form action="/admin/cards/delete/<%= singleCard.id %>" method="POST" style="margin-top: 15px;">
+                            <button type="submit" class="btn btn-danger">
+                                Delete Card
+                            </button>
+                        </form>
+
+                        <a href="/admin/cards" class="btn btn-secondary mt-2">
+                            Back to Cards
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <% } else { %>
+                <h3>Card not found</h3>
+                <% } %>
+
+</body>
+
+</html>

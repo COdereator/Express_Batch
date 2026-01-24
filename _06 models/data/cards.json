@@ -1,0 +1,16 @@
+[
+    {
+        "id": 25,
+        "title": "thisha",
+        "desc": "this is the description for card_01",
+        "image": "https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-800x525.jpg",
+        "price": "12000"
+    },
+    {
+        "id": 36,
+        "title": "title_04",
+        "desc": "this is the description for card_04",
+        "image": "https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?cs=srgb&dl=pexels-souvenirpixels-414612.jpg&fm=jpg",
+        "price": "7000/-"
+    }
+]

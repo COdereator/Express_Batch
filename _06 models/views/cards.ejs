@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cards</title>
+</head>
+
+<body>
+
+    <%- include('partials/nav') %>
+
+        <div class="container">
+            <div class="row">
+
+                <% cards.forEach(card=> { %>
+                    <div class="col-3">
+                        <div class="card">
+                            <img src="<%= card.image %>" class="card-top-img" />
+
+                            <div class="card-body">
+                                <h4>
+                                    <%= card.title %>
+                                </h4>
+                                <p>
+                                    <%= card.desc %>
+                                </p>
+                                <div class="btn btn-dark">
+                                    <%= card.price %>
+                                </div>
+
+                                <a href="/admin/cards/<%= card.id %>" class="btn btn-warning ms-2">
+                                    Details
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <% }) %>
+
+            </div>
+        </div>
+
+</body>
+
+</html>
